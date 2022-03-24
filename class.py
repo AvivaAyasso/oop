@@ -262,15 +262,15 @@ print(dog2)
 #4
 class Cars:
     def __init__(self, model, color, price):
-        self.__model = model
+        self.model = model
         self.__color = color
         self.__price = price
 
     def getModel(self):
-        return self.__model
+        return self.model
 
     def setModel(self, model):
-        self.__model = model
+        self.model = model
 
     def getColor(self):
         return self.__color
@@ -285,7 +285,7 @@ class Cars:
         self.__price = price
 
     def __str__(self):
-        return self.__model +" "+ self.__color +" "+str(self.__price)
+        return self.model +" "+ self.__color +" "+str(self.__price)
 
 
 car1 = Cars("Mazda", "Black", 30000)
@@ -304,5 +304,54 @@ def maxPrice():
             max = cars[i+1]
     return max
 
-#print(maxPrice().getPrice(), maxPrice().getColor(), maxPrice().getModel())
-print(Cars.__str__(maxPrice()))
+# print(Cars.__str__(maxPrice()))
+del car4.model
+car4.setModel("number of wheels : 4")
+print(car4)
+print(car1)
+print(car2)
+print(car3)
+
+5
+class Student:
+    def __init__(self, name, id, mathGrade, histhoryGrade, literatureGrade, classs, yareOfBirht):
+        self.__name = name
+        self.__id = id
+        self.__mathGrade = mathGrade
+        self.__histhoryGrade = histhoryGrade
+        self.__literatureGrade = literatureGrade
+        self.__classs = classs
+        self.__yaerOfBirht = yareOfBirht
+
+    def getMathGrade(self):
+        return self.__mathGrade
+
+    def setMathGrade(self, mathgrade):
+        self.__mathGrade = mathgrade
+
+    def gethisthoryGrade(self):
+        return self.__histhoryGrade
+
+    def sethisthoryGrade(self, histhoryGrade):
+        self.__histhoryGrade = histhoryGrade
+
+    def getliteratureGrade(self):
+        return self.__literatureGrade
+
+    def setliteratureGrade(self, literatureGrade):
+        self.__literatureGrade = literatureGrade
+
+    def avgAge(self):
+        avgAge = 2022 - self.__yaerOfBirht
+        return avgAge
+
+student1 = Student("aviva", 555, 90, 100, 85, 12, 1991)
+student2 = Student("betty", 444, 100, 95, 70, 12, 1999)
+student3 = Student("rivka", 333, 88, 99, 70, 12, 1194)
+student4 = Student("tziona", 777, 100, 80, 85, 12, 1994)
+
+g = Student.avgAge(student1)
+print(g)
+
+
+
