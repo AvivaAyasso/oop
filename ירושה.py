@@ -36,9 +36,13 @@ class Student(Person):
         self.__grade=grade
 
     def __str__(self):
-        return super().__str__()+" "+self.__grade
+        return super().__str__()+" "+str(self.__grade)
 
 
 st1=Student("ron",12222,80)
 print(st1)
 per1=Person("david",11111)
+print(per1)
+
+#Class exercises:
+
