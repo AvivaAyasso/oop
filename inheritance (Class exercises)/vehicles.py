@@ -4,9 +4,9 @@ class Vehicles:
         self.model = model
         self.wheels = wheels
 
-        if self.wheels < 4 or self.wheels != 4:
-            print("It is not possible to register a vehicle with less than four wheels.")
-            self.wheels = 4
+        if self.wheels < 2:
+            print("It is not possible to register a vehicle with less than two wheels.")
+            self.wheels = 2
         else:
             self.wheels = self.wheels
 
@@ -26,9 +26,9 @@ class Vehicles:
         return self.wheels
 
     def setWheels(self, wheels):
-        if self.wheels < 4 or self.wheels != 4:
+        if self.wheels < 2:
             print("It is not possible to register a vehicle with less than four wheels.")
-            self.wheels = 4
+            self.wheels = 2
         else:
             self.wheels = self.wheels
 

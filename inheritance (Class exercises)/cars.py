@@ -14,3 +14,5 @@ class Cars (Vehicles):
     def __str__(self):
         return str(self.year) +" "+ self.color +" "+ self.model +" "+ str(self.wheels)
 
+car1 = Cars(1999, "red", "kia", 3)
+print(car1)
