@@ -1,7 +1,7 @@
 from vehicles import Vehicles
 
 class Airplane(Vehicles):
-    def __init__(self, wings, color, model, wheels):
+    def __init__(self, color, model, wheels, wings=2):
         super().__init__(color, model, wheels)
         self.wings = wings
 
@@ -12,7 +12,7 @@ class Airplane(Vehicles):
         self.wings = wings
 
     def __str__(self):
-        return str(self.wings) +" "+ self.color +" "+ self.model +" "+ str(self.wheels)
+        return self.color +" "+ self.model +" "+ str(self.wheels) +" "+ str(self.wings)
 
-plan1 = Airplane(2, "green", "fkkfk", 6)
-print(plan1)
+plane1 = Airplane("green", "fkkfk", 6)
+print(plane1)

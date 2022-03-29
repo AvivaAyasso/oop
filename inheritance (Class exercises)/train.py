@@ -1,7 +1,7 @@
 from vehicles import Vehicles
 
 class Train (Vehicles):
-    def __init__(self, carriage=20, color="red", model="mian", wheels=40):
+    def __init__(self, color, model, wheels, carriage=20):
         super().__init__(color, model, wheels)
         self.carriage = carriage
 
@@ -12,7 +12,7 @@ class Train (Vehicles):
         self.carriage = carriage
 
     def __str__(self):
-        return str(self.carriage) +" "+ self.color +" "+ self.model +" "+ str(self.wheels)
+        return self.color +" "+ self.model +" "+ str(self.wheels) +" "+ str(self.carriage)
 
-train1 = Train()
+train1 = Train("pink", "kkk", 40)
 print(train1)

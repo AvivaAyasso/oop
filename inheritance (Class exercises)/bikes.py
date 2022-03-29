@@ -1,7 +1,7 @@
 from vehicles import Vehicles
 
 class Bikes (Vehicles):
-    def __init__(self, trainingWheels, color, model, wheels):
+    def __init__(self, color, model, wheels, trainingWheels, ):
         super().__init__(color, model, wheels)
         self.trainingWheels = trainingWheels
 
@@ -12,7 +12,7 @@ class Bikes (Vehicles):
         self.trainingWheels = trainingWheels
 
     def __str__(self):
-        return str(self.trainingWheels) +" "+ self.color +" "+ self.model +" "+ str(self.wheels)
+        return  self.color +" "+ self.model +" "+ str(self.wheels) +" "+ str(self.trainingWheels)
 
-bike1 = Bikes(1, "pink", "kkl",5)
+bike1 = Bikes("pink", "kkl", 1, 1)
 print(bike1)
